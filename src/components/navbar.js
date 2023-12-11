@@ -8,7 +8,7 @@ function Navbar() {
 
         <nav class="navbar is-info" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item" link to="Home">
+                <a class="navbar-item" Link to="Home">
                     <img src={logo} width="80" height="80" />
                 </a>
 
@@ -22,16 +22,16 @@ function Navbar() {
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
                     <a class="navbar-item">
-                        Productos
+                        <Link to="/Productos">Productos</Link>
                     </a>
 
                     <a class="navbar-item">
-                        Area Mayorista
+                    <Link to="/Mayorista">Area Mayorista</Link>
                     </a>
 
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
-                            Categorias
+                        <Link to="/Categorias">Categorias</Link>
                         </a>
 
                         <div class="navbar-dropdown">

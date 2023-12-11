@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom"
 import ListaArticulos from "../asserts/articulos"
+import "bulma/css/bulma.css"
+import "../Styles.css"
+
+const Arts = require.context("../img/")
 
 function Productos() {
 
@@ -7,15 +11,24 @@ function Productos() {
 
         <div>
             <h1>Productos</h1>
-            <div>
+            <div className="columns">
                 {ListaArticulos.map((producto) => {
                     return (
-                        <article>
-                            <h5>{producto.modelo}</h5>
-                            <img src={producto.imagen} alt="imagen de calzado"/>
-                            <Link to="">Mas info</Link>
-
-                        </article>
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src={Arts(`./${producto.imagen}`)} alt="imagen de calzado" />
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-4">{producto.modelo}</p>
+                                    </div>
+                                </div>
+                                <Link to="">Mas info</Link>
+                            </div>
+                        </div>
                     )
                 }
                 )
