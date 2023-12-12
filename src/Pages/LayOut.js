@@ -7,9 +7,6 @@ function LayOut() {
         <div>
             <Navbar />
             <Outlet />
-            <footer>
-                <h1>Footer</h1>
-            </footer>
         </div>
     )
 

@@ -8,8 +8,8 @@ function Navbar() {
 
         <nav class="navbar is-info" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item" Link to="Home">
-                    <img src={logo} width="80" height="80" />
+                <a class="navbar-item" >
+                    <Link to="/"><img src={logo} width="80" height="80" /></Link>
                 </a>
 
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -25,27 +25,23 @@ function Navbar() {
                         <Link to="/Productos">Productos</Link>
                     </a>
 
-                    <a class="navbar-item">
-                    <Link to="/Mayorista">Area Mayorista</Link>
-                    </a>
-
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
-                        <Link to="/Categorias">Categorias</Link>
+                            Categorias
                         </a>
 
                         <div class="navbar-dropdown">
                             <a class="navbar-item">
-                                Urban Street
+                                <Link to="Productos/Categoria/urbanStreet">Urban Street</Link>
                             </a>
                             <a class="navbar-item">
-                                Urbano
+                                <Link to="Productos/Categoria/urbano">Urbano</Link>
                             </a>
                             <a class="navbar-item">
-                                Premium
+                                <Link to="Productos/Categoria/premium">Premium</Link>
                             </a>
                             <a class="navbar-item">
-                                Dama
+                                <Link to="Productos/Categoria/dama">Dama</Link>
                             </a>
                         </div>
                     </div>

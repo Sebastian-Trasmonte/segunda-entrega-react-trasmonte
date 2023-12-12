@@ -1,11 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LayOut from "./Pages/LayOut";
 import Home from "./Pages/Home";
-import Categorias from "./Pages/categorias";
-import Productos from "./Pages/Productos";
-import Mayorista from "./Pages/Mayorista";
-import Producto from "./Pages/Producto";
-
+import ItemListContainer from "./components/ItemListContainer";
+import ItemDetailtContainer from "./components/ItemDetailContainer";
 
 function App() {
   return (
@@ -13,10 +10,9 @@ function App() {
       <Routes>
         <Route path="/" element={<LayOut />}>
           <Route index element={<Home />} />
-          <Route path="Productos" element={<Productos />} />
-          <Route path="Productos/:ProductoId" element={Producto} />
-          <Route path="Categorias" element={<Categorias />} />
-          <Route path="Mayorista" element={<Mayorista />} />
+          <Route path="Productos" element={<ItemListContainer />} />
+          <Route path="/id/:idProducto" element={<ItemDetailtContainer />} />
+          <Route path="Productos/Categoria/:categoria" element={<ItemListContainer />} />
           <Route path="*" element={<div>Error 404</div>} />
         </Route>
       </Routes>
