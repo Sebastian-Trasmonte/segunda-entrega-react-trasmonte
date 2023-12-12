@@ -10,15 +10,14 @@ const imgArts = require.context("../img/")
 
 function ItemDetailtContainer() {
     const { idProducto } = useParams()
-
-    const [articulo, setArticulo] = useState([])
+    console.log("aqui va el id producto", idProducto)
+    const [articulo, setArticulo] = useState()
 
     const navigateTo = useNavigate()
 
 
     useEffect(() => {
 
-            console.log(idProducto)
 
 
         if (idProducto) {
@@ -44,8 +43,7 @@ function ItemDetailtContainer() {
     }
 
     return (
-
-        <div>
+        articulo ? (< div >
             <div className="columns">
                 <div class="card">
                     <div class="card-image">
@@ -61,12 +59,9 @@ function ItemDetailtContainer() {
                         </div>
                     </div>
                 </div>
-
-
-
-
             </div>
-        </div>
+        </div >) : (<div>Cargando...</div>)
+
     )
 
 }

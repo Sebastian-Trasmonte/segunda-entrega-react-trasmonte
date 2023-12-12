@@ -50,7 +50,7 @@ function ItemListContainer() {
                                         <p class="title is-4">{producto.modelo}</p>
                                     </div>
                                 </div>
-                                <Link to={`Productos/id/${producto.id}`}>Mas info</Link>
+                                <Link to={`/Productos/id/${producto.id}`}>Mas info</Link>
                             </div>
                         </div>
                     )

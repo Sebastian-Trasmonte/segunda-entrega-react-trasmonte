@@ -10,9 +10,9 @@ function App() {
       <Routes>
         <Route path="/" element={<LayOut />}>
           <Route index element={<Home />} />
-          <Route path="Productos" element={<ItemListContainer />} />
-          <Route path="/id/:idProducto" element={<ItemDetailtContainer />} />
-          <Route path="Productos/Categoria/:categoria" element={<ItemListContainer />} />
+          <Route path="/Productos" element={<ItemListContainer />} />
+          <Route path="/Productos/id/:idProducto" element={<ItemDetailtContainer />} />
+          <Route path="/Productos/Categoria/:categoria" element={<ItemListContainer />} />
           <Route path="*" element={<div>Error 404</div>} />
         </Route>
       </Routes>
